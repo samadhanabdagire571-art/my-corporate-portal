@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # ==============================================================================
+  # 1. Reverse Proxy & Layer 7 Load Balancer
+  # ==============================================================================
+  load-balancer:
+    image: node:20-alpine
+    container_name: corporate-load-balancer
+    working_dir: /app
+    volumes:
+      - ./backend/load-balancer.js:/app/load-balancer.js
+    environment:
+      - PORT=8080
+      - API_INSTANCES=http://api-1:4000,http://api-2:4000
+      - HEALTH_CHECK_INTERVAL_MS=5000
+    ports:
+      - "8080:8080"
+    command: node load-balancer.js
+    depends_on:
+      - api-1
+      - api-2
+
+  # ==============================================================================
+  # 2. Clustered API Gateway & NestJS Backend Instance 1
+  # ==============================================================================
+  api-1:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: corporate-api-1
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+    ports:
+      - "4001:4000"
+    depends_on:
+      - redis
+
+  # ==============================================================================
+  # 3. Clustered API Gateway & NestJS Backend Instance 2
+  # ==============================================================================
+  api-2:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: corporate-api-2
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+    ports:
+      - "4002:4000"
+    depends_on:
+      - redis
+
+  # ==============================================================================
+  # 4. Redis Enterprise Cache & Event Buffer
+  # ==============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: corporate-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+
+  # ==============================================================================
+  # 5. Frontend Client Portal (React + Vite + Tailwind/Vanilla CSS)
+  # ==============================================================================
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: corporate-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8080/api/v1
+    depends_on:
+      - load-balancer
+
+volumes:
+  redis-data:

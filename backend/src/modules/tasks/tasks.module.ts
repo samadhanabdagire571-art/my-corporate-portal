@@ -1,0 +1,14 @@
+import { Module } from '@nestjs/common';
+import { TasksController } from './tasks.controller';
+import { TasksService } from './tasks.service';
+import { AuthModule } from '../auth/auth.module';
+import { EventsModule } from '../events/events.module';
+
+@Module({
+  imports: [AuthModule, EventsModule],
+  controllers: [TasksController],
+  providers: [TasksService],
+  exports: [TasksService],
+})
+export class TasksModule {}
+

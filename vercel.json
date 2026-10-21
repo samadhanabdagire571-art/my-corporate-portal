@@ -1,0 +1,33 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "corporate-portal-backend": {
+      "root": "backend",
+      "framework": "nestjs",
+      "buildCommand": "npm install && npm run build"
+    },
+    "backend-django": {
+      "root": "backend-django",
+      "framework": "django"
+    },
+    "corporate-portal-frontend": {
+      "root": "frontend",
+      "framework": "vite",
+      "buildCommand": "npm install && npm run build"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": {
+        "service": "corporate-portal-backend"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "corporate-portal-frontend"
+      }
+    }
+  ]
+}

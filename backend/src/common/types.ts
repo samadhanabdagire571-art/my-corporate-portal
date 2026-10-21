@@ -137,6 +137,7 @@ export interface AssignmentHistoryItem {
 }
 
 export interface TaskEntity {
+  assignedToUserId: any;
   id: string;
   organizationId: string;
   projectId: string;

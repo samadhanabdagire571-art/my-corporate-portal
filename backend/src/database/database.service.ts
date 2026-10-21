@@ -700,6 +700,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2024-01-05T08:00:00Z',
         updatedAt: '2024-01-15T17:00:00Z',
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000002',
@@ -731,6 +732,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2024-01-16T08:00:00Z',
         updatedAt: '2024-01-28T18:00:00Z',
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000003',
@@ -762,6 +764,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2024-01-25T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000004',
@@ -793,6 +796,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2024-02-01T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000005',
@@ -824,6 +828,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2024-02-05T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000006',
@@ -855,6 +860,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2024-02-10T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000007',
@@ -873,6 +879,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2024-02-15T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000008',
@@ -891,6 +898,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2024-02-20T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '10000000-0000-0000-0000-000000000009',
@@ -909,6 +917,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2024-02-25T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       }
     ];
 
@@ -932,6 +941,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2024-02-15T08:00:00Z',
         updatedAt: '2024-02-28T17:00:00Z',
+        assignedToUserId: undefined
       },
       {
         id: '20000000-0000-0000-0000-000000000002',
@@ -950,6 +960,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2024-03-01T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '20000000-0000-0000-0000-000000000003',
@@ -968,6 +979,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2024-03-10T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       }
     );
 
@@ -1005,6 +1017,7 @@ export class DatabaseService implements OnModuleInit {
         ],
         createdAt: '2026-09-28T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '30000000-0000-0000-0000-000000000002',
@@ -1023,6 +1036,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2026-09-28T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '30000000-0000-0000-0000-000000000003',
@@ -1046,6 +1060,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2026-09-27T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '30000000-0000-0000-0000-000000000004',
@@ -1069,6 +1084,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2026-09-25T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '30000000-0000-0000-0000-000000000005',
@@ -1091,6 +1107,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2026-09-20T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       },
       {
         id: '30000000-0000-0000-0000-000000000006',
@@ -1109,6 +1126,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: [],
         createdAt: '2026-09-28T08:00:00Z',
         updatedAt: now,
+        assignedToUserId: undefined
       }
     );
 
@@ -1673,6 +1691,255 @@ export class DatabaseService implements OnModuleInit {
       }
     ];
 
+    // ============================================================================
+    // 16. LARGE ENTERPRISE EXPANSION — 40 more Users, Employees, Teams, Projects & Tasks
+    // ============================================================================
+
+    // --- 16a. New Users (IDs b0000000-0000-0000-0000-00000000xx12 → xx51) ---
+    this.users.push(
+      // Team Leaders
+      { id: 'b0000000-0000-0000-0000-000000000012', organizationId: orgId, email: 'priya.mehta.tl@corporate.com', employeeId: 'EMP-TL-003', passwordHash: leaderHash, role: UserRole.TEAM_LEADER, status: EntityStatus.ACTIVE, createdAt: '2023-06-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000013', organizationId: orgId, email: 'james.foster.tl@corporate.com', employeeId: 'EMP-TL-004', passwordHash: leaderHash, role: UserRole.TEAM_LEADER, status: EntityStatus.ACTIVE, createdAt: '2023-07-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000014', organizationId: orgId, email: 'linda.park.tl@corporate.com', employeeId: 'EMP-TL-005', passwordHash: leaderHash, role: UserRole.TEAM_LEADER, status: EntityStatus.ACTIVE, createdAt: '2023-08-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000015', organizationId: orgId, email: 'carlos.reyes.tl@corporate.com', employeeId: 'EMP-TL-006', passwordHash: leaderHash, role: UserRole.TEAM_LEADER, status: EntityStatus.ACTIVE, createdAt: '2023-09-01T08:00:00Z', updatedAt: now },
+      // Employees
+      { id: 'b0000000-0000-0000-0000-000000000016', organizationId: orgId, email: 'oliver.hayes@corporate.com', employeeId: 'EMP-DEV-012', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-05-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000017', organizationId: orgId, email: 'isabella.moore@corporate.com', employeeId: 'EMP-MKT-001', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-05-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000018', organizationId: orgId, email: 'noah.wright@corporate.com', employeeId: 'EMP-MKT-002', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-06-05T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000019', organizationId: orgId, email: 'sophia.turner@corporate.com', employeeId: 'EMP-HR-001', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-04-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000020', organizationId: orgId, email: 'ethan.brooks@corporate.com', employeeId: 'EMP-HR-002', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-04-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000021', organizationId: orgId, email: 'mia.carter@corporate.com', employeeId: 'EMP-PM-001', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-07-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000022', organizationId: orgId, email: 'luca.romano@corporate.com', employeeId: 'EMP-PM-002', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-08-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000023', organizationId: orgId, email: 'ava.johnson@corporate.com', employeeId: 'EMP-DEV-013', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-09-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000024', organizationId: orgId, email: 'mason.lee@corporate.com', employeeId: 'EMP-DEV-014', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-10-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000025', organizationId: orgId, email: 'charlotte.white@corporate.com', employeeId: 'EMP-OPS-001', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-10-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000026', organizationId: orgId, email: 'james.nelson@corporate.com', employeeId: 'EMP-OPS-002', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2023-11-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000027', organizationId: orgId, email: 'amelia.scott@corporate.com', employeeId: 'EMP-DEV-015', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-01-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000028', organizationId: orgId, email: 'benjamin.harris@corporate.com', employeeId: 'EMP-DEV-016', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-02-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000029', organizationId: orgId, email: 'zoe.robinson@corporate.com', employeeId: 'EMP-QA-002', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-02-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000030', organizationId: orgId, email: 'daniel.murphy@corporate.com', employeeId: 'EMP-QA-003', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-03-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000031', organizationId: orgId, email: 'grace.cooper@corporate.com', employeeId: 'EMP-DES-001', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-01-20T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000032', organizationId: orgId, email: 'henry.evans@corporate.com', employeeId: 'EMP-DES-002', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-02-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000033', organizationId: orgId, email: 'chloe.morris@corporate.com', employeeId: 'EMP-MKT-003', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-03-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000034', organizationId: orgId, email: 'ryan.bell@corporate.com', employeeId: 'EMP-DEV-017', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-03-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000035', organizationId: orgId, email: 'lily.james@corporate.com', employeeId: 'EMP-HR-003', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-04-01T08:00:00Z', updatedAt: now },
+      // Interns
+      { id: 'b0000000-0000-0000-0000-000000000036', organizationId: orgId, email: 'finn.walker@corporate.com', employeeId: 'INT-ENG-002', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-06-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000037', organizationId: orgId, email: 'aria.thompson@corporate.com', employeeId: 'INT-DES-003', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-06-05T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000038', organizationId: orgId, email: 'leo.garcia@corporate.com', employeeId: 'INT-MKT-001', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-06-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000039', organizationId: orgId, email: 'maya.patel@corporate.com', employeeId: 'INT-HR-001', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-07-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000040', organizationId: orgId, email: 'jake.wilson@corporate.com', employeeId: 'INT-ENG-003', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-07-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000041', organizationId: orgId, email: 'emma.hughes@corporate.com', employeeId: 'INT-QA-002', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-08-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000042', organizationId: orgId, email: 'sam.anderson@corporate.com', employeeId: 'INT-PM-001', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-08-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000043', organizationId: orgId, email: 'nora.kelly@corporate.com', employeeId: 'INT-ENG-004', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-09-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000044', organizationId: orgId, email: 'alex.morgan@corporate.com', employeeId: 'INT-DES-004', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-09-05T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000045', organizationId: orgId, email: 'ruby.chen@corporate.com', employeeId: 'INT-ENG-005', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-09-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000046', organizationId: orgId, email: 'kai.nguyen@corporate.com', employeeId: 'INT-QA-003', passwordHash: internHash, role: UserRole.INTERN, status: EntityStatus.ACTIVE, createdAt: '2024-10-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000047', organizationId: orgId, email: 'zara.ali@corporate.com', employeeId: 'EMP-DEV-018', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-04-15T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000048', organizationId: orgId, email: 'max.chen@corporate.com', employeeId: 'EMP-DEV-019', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-05-01T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000049', organizationId: orgId, email: 'sophie.taylor@corporate.com', employeeId: 'EMP-OPS-003', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-05-10T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000050', organizationId: orgId, email: 'tom.black@corporate.com', employeeId: 'EMP-QA-004', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-05-20T08:00:00Z', updatedAt: now },
+      { id: 'b0000000-0000-0000-0000-000000000051', organizationId: orgId, email: 'diana.prince@corporate.com', employeeId: 'EMP-PM-003', passwordHash: empHash, role: UserRole.EMPLOYEE, status: EntityStatus.ACTIVE, createdAt: '2024-06-01T08:00:00Z', updatedAt: now }
+    );
+
+    // --- 16b. New Employees ---
+    this.employees.push(
+      // Team Leaders
+      { id: 'c0000000-0000-0000-0000-000000000012', userId: 'b0000000-0000-0000-0000-000000000012', organizationId: orgId, fullName: 'Priya Mehta', employeeId: 'EMP-TL-003', email: 'priya.mehta.tl@corporate.com', phone: '+1 (555) 021-1001', department: 'Marketing', designation: 'Marketing Team Lead', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-06-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-06-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000013', userId: 'b0000000-0000-0000-0000-000000000013', organizationId: orgId, fullName: 'James Foster', employeeId: 'EMP-TL-004', email: 'james.foster.tl@corporate.com', phone: '+1 (555) 021-1002', department: 'Human Resources', designation: 'HR Team Lead', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-07-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-07-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000014', userId: 'b0000000-0000-0000-0000-000000000014', organizationId: orgId, fullName: 'Linda Park', employeeId: 'EMP-TL-005', email: 'linda.park.tl@corporate.com', phone: '+1 (555) 021-1003', department: 'Product Management', designation: 'Product Team Lead', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-08-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-08-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000015', userId: 'b0000000-0000-0000-0000-000000000015', organizationId: orgId, fullName: 'Carlos Reyes', employeeId: 'EMP-TL-006', email: 'carlos.reyes.tl@corporate.com', phone: '+1 (555) 021-1004', department: 'DevOps & Infrastructure', designation: 'DevOps Team Lead', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-09-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-09-01T08:00:00Z', updatedAt: now },
+      // Employees
+      { id: 'c0000000-0000-0000-0000-000000000016', userId: 'b0000000-0000-0000-0000-000000000016', organizationId: orgId, fullName: 'Oliver Hayes', employeeId: 'EMP-DEV-012', email: 'oliver.hayes@corporate.com', phone: '+1 (555) 021-1005', department: 'Engineering', designation: 'Backend Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-05-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-05-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000017', userId: 'b0000000-0000-0000-0000-000000000017', organizationId: orgId, fullName: 'Isabella Moore', employeeId: 'EMP-MKT-001', email: 'isabella.moore@corporate.com', phone: '+1 (555) 021-1006', department: 'Marketing', designation: 'Digital Marketing Specialist', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-05-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-05-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000018', userId: 'b0000000-0000-0000-0000-000000000018', organizationId: orgId, fullName: 'Noah Wright', employeeId: 'EMP-MKT-002', email: 'noah.wright@corporate.com', phone: '+1 (555) 021-1007', department: 'Marketing', designation: 'Content Strategist', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-06-05', profilePhotoUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-06-05T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000019', userId: 'b0000000-0000-0000-0000-000000000019', organizationId: orgId, fullName: 'Sophia Turner', employeeId: 'EMP-HR-001', email: 'sophia.turner@corporate.com', phone: '+1 (555) 021-1008', department: 'Human Resources', designation: 'HR Business Partner', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-04-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-04-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000020', userId: 'b0000000-0000-0000-0000-000000000020', organizationId: orgId, fullName: 'Ethan Brooks', employeeId: 'EMP-HR-002', email: 'ethan.brooks@corporate.com', phone: '+1 (555) 021-1009', department: 'Human Resources', designation: 'Talent Acquisition Specialist', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-04-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-04-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000021', userId: 'b0000000-0000-0000-0000-000000000021', organizationId: orgId, fullName: 'Mia Carter', employeeId: 'EMP-PM-001', email: 'mia.carter@corporate.com', phone: '+1 (555) 021-1010', department: 'Product Management', designation: 'Senior Product Manager', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-07-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-07-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000022', userId: 'b0000000-0000-0000-0000-000000000022', organizationId: orgId, fullName: 'Luca Romano', employeeId: 'EMP-PM-002', email: 'luca.romano@corporate.com', phone: '+1 (555) 021-1011', department: 'Product Management', designation: 'Product Analyst', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-08-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-08-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000023', userId: 'b0000000-0000-0000-0000-000000000023', organizationId: orgId, fullName: 'Ava Johnson', employeeId: 'EMP-DEV-013', email: 'ava.johnson@corporate.com', phone: '+1 (555) 021-1012', department: 'Engineering', designation: 'React Frontend Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-09-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-09-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000024', userId: 'b0000000-0000-0000-0000-000000000024', organizationId: orgId, fullName: 'Mason Lee', employeeId: 'EMP-DEV-014', email: 'mason.lee@corporate.com', phone: '+1 (555) 021-1013', department: 'Engineering', designation: 'Node.js Backend Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-10-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-10-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000025', userId: 'b0000000-0000-0000-0000-000000000025', organizationId: orgId, fullName: 'Charlotte White', employeeId: 'EMP-OPS-001', email: 'charlotte.white@corporate.com', phone: '+1 (555) 021-1014', department: 'DevOps & Infrastructure', designation: 'Cloud DevOps Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-10-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-10-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000026', userId: 'b0000000-0000-0000-0000-000000000026', organizationId: orgId, fullName: 'James Nelson', employeeId: 'EMP-OPS-002', email: 'james.nelson@corporate.com', phone: '+1 (555) 021-1015', department: 'DevOps & Infrastructure', designation: 'Site Reliability Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2023-11-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2023-11-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000027', userId: 'b0000000-0000-0000-0000-000000000027', organizationId: orgId, fullName: 'Amelia Scott', employeeId: 'EMP-DEV-015', email: 'amelia.scott@corporate.com', phone: '+1 (555) 021-1016', department: 'Engineering', designation: 'Mobile App Developer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-01-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-01-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000028', userId: 'b0000000-0000-0000-0000-000000000028', organizationId: orgId, fullName: 'Benjamin Harris', employeeId: 'EMP-DEV-016', email: 'benjamin.harris@corporate.com', phone: '+1 (555) 021-1017', department: 'Engineering', designation: 'Data Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-02-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-02-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000029', userId: 'b0000000-0000-0000-0000-000000000029', organizationId: orgId, fullName: 'Zoe Robinson', employeeId: 'EMP-QA-002', email: 'zoe.robinson@corporate.com', phone: '+1 (555) 021-1018', department: 'Quality Assurance', designation: 'QA Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-02-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-02-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000030', userId: 'b0000000-0000-0000-0000-000000000030', organizationId: orgId, fullName: 'Daniel Murphy', employeeId: 'EMP-QA-003', email: 'daniel.murphy@corporate.com', phone: '+1 (555) 021-1019', department: 'Quality Assurance', designation: 'Performance Test Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-03-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-03-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000031', userId: 'b0000000-0000-0000-0000-000000000031', organizationId: orgId, fullName: 'Grace Cooper', employeeId: 'EMP-DES-001', email: 'grace.cooper@corporate.com', phone: '+1 (555) 021-1020', department: 'Product Design', designation: 'Senior UX Designer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-01-20', profilePhotoUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-01-20T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000032', userId: 'b0000000-0000-0000-0000-000000000032', organizationId: orgId, fullName: 'Henry Evans', employeeId: 'EMP-DES-002', email: 'henry.evans@corporate.com', phone: '+1 (555) 021-1021', department: 'Product Design', designation: 'Visual Designer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-02-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-02-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000033', userId: 'b0000000-0000-0000-0000-000000000033', organizationId: orgId, fullName: 'Chloe Morris', employeeId: 'EMP-MKT-003', email: 'chloe.morris@corporate.com', phone: '+1 (555) 021-1022', department: 'Marketing', designation: 'SEO & Analytics Manager', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-03-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-03-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000034', userId: 'b0000000-0000-0000-0000-000000000034', organizationId: orgId, fullName: 'Ryan Bell', employeeId: 'EMP-DEV-017', email: 'ryan.bell@corporate.com', phone: '+1 (555) 021-1023', department: 'Engineering', designation: 'Full Stack Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-03-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-03-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000035', userId: 'b0000000-0000-0000-0000-000000000035', organizationId: orgId, fullName: 'Lily James', employeeId: 'EMP-HR-003', email: 'lily.james@corporate.com', phone: '+1 (555) 021-1024', department: 'Human Resources', designation: 'HR Operations Coordinator', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-04-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-04-01T08:00:00Z', updatedAt: now },
+      // Interns
+      { id: 'c0000000-0000-0000-0000-000000000036', userId: 'b0000000-0000-0000-0000-000000000036', organizationId: orgId, fullName: 'Finn Walker', employeeId: 'INT-ENG-002', email: 'finn.walker@corporate.com', phone: '+1 (555) 021-1025', department: 'Engineering', designation: 'Software Engineering Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-06-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-06-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000037', userId: 'b0000000-0000-0000-0000-000000000037', organizationId: orgId, fullName: 'Aria Thompson', employeeId: 'INT-DES-003', email: 'aria.thompson@corporate.com', phone: '+1 (555) 021-1026', department: 'Product Design', designation: 'UX Design Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-06-05', profilePhotoUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-06-05T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000038', userId: 'b0000000-0000-0000-0000-000000000038', organizationId: orgId, fullName: 'Leo Garcia', employeeId: 'INT-MKT-001', email: 'leo.garcia@corporate.com', phone: '+1 (555) 021-1027', department: 'Marketing', designation: 'Marketing Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-06-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-06-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000039', userId: 'b0000000-0000-0000-0000-000000000039', organizationId: orgId, fullName: 'Maya Patel', employeeId: 'INT-HR-001', email: 'maya.patel@corporate.com', phone: '+1 (555) 021-1028', department: 'Human Resources', designation: 'HR Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-07-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-07-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000040', userId: 'b0000000-0000-0000-0000-000000000040', organizationId: orgId, fullName: 'Jake Wilson', employeeId: 'INT-ENG-003', email: 'jake.wilson@corporate.com', phone: '+1 (555) 021-1029', department: 'Engineering', designation: 'Backend Engineering Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-07-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-07-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000041', userId: 'b0000000-0000-0000-0000-000000000041', organizationId: orgId, fullName: 'Emma Hughes', employeeId: 'INT-QA-002', email: 'emma.hughes@corporate.com', phone: '+1 (555) 021-1030', department: 'Quality Assurance', designation: 'QA Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-08-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-08-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000042', userId: 'b0000000-0000-0000-0000-000000000042', organizationId: orgId, fullName: 'Sam Anderson', employeeId: 'INT-PM-001', email: 'sam.anderson@corporate.com', phone: '+1 (555) 021-1031', department: 'Product Management', designation: 'Product Management Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-08-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-08-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000043', userId: 'b0000000-0000-0000-0000-000000000043', organizationId: orgId, fullName: 'Nora Kelly', employeeId: 'INT-ENG-004', email: 'nora.kelly@corporate.com', phone: '+1 (555) 021-1032', department: 'Engineering', designation: 'Frontend Engineering Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-09-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-09-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000044', userId: 'b0000000-0000-0000-0000-000000000044', organizationId: orgId, fullName: 'Alex Morgan', employeeId: 'INT-DES-004', email: 'alex.morgan@corporate.com', phone: '+1 (555) 021-1033', department: 'Product Design', designation: 'Graphic Design Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-09-05', profilePhotoUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-09-05T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000045', userId: 'b0000000-0000-0000-0000-000000000045', organizationId: orgId, fullName: 'Ruby Chen', employeeId: 'INT-ENG-005', email: 'ruby.chen@corporate.com', phone: '+1 (555) 021-1034', department: 'Engineering', designation: 'DevOps Engineering Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-09-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-09-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000046', userId: 'b0000000-0000-0000-0000-000000000046', organizationId: orgId, fullName: 'Kai Nguyen', employeeId: 'INT-QA-003', email: 'kai.nguyen@corporate.com', phone: '+1 (555) 021-1035', department: 'Quality Assurance', designation: 'Automation Testing Intern', employeeType: EmployeeType.INTERN, joiningDate: '2024-10-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-10-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000047', userId: 'b0000000-0000-0000-0000-000000000047', organizationId: orgId, fullName: 'Zara Ali', employeeId: 'EMP-DEV-018', email: 'zara.ali@corporate.com', phone: '+1 (555) 021-1036', department: 'Engineering', designation: 'API Integration Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-04-15', profilePhotoUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-04-15T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000048', userId: 'b0000000-0000-0000-0000-000000000048', organizationId: orgId, fullName: 'Max Chen', employeeId: 'EMP-DEV-019', email: 'max.chen@corporate.com', phone: '+1 (555) 021-1037', department: 'Engineering', designation: 'AI/ML Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-05-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-05-01T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000049', userId: 'b0000000-0000-0000-0000-000000000049', organizationId: orgId, fullName: 'Sophie Taylor', employeeId: 'EMP-OPS-003', email: 'sophie.taylor@corporate.com', phone: '+1 (555) 021-1038', department: 'DevOps & Infrastructure', designation: 'Kubernetes Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-05-10', profilePhotoUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-05-10T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000050', userId: 'b0000000-0000-0000-0000-000000000050', organizationId: orgId, fullName: 'Tom Black', employeeId: 'EMP-QA-004', email: 'tom.black@corporate.com', phone: '+1 (555) 021-1039', department: 'Quality Assurance', designation: 'Security QA Engineer', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-05-20', profilePhotoUrl: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-05-20T08:00:00Z', updatedAt: now },
+      { id: 'c0000000-0000-0000-0000-000000000051', userId: 'b0000000-0000-0000-0000-000000000051', organizationId: orgId, fullName: 'Diana Prince', employeeId: 'EMP-PM-003', email: 'diana.prince@corporate.com', phone: '+1 (555) 021-1040', department: 'Product Management', designation: 'Product Owner', employeeType: EmployeeType.EMPLOYEE, joiningDate: '2024-06-01', profilePhotoUrl: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80', status: EntityStatus.ACTIVE, createdAt: '2024-06-01T08:00:00Z', updatedAt: now }
+    );
+
+    // --- 16c. New Teams ---
+    this.teams.push(
+      { id: 'd0000000-0000-0000-0000-000000000004', organizationId: orgId, name: 'Digital Marketing & Growth', department: 'Marketing', leaderId: 'c0000000-0000-0000-0000-000000000012', description: 'Brand campaigns, SEO, content strategy and digital advertising.', status: EntityStatus.ACTIVE, createdAt: '2023-06-05T08:00:00Z', updatedAt: now },
+      { id: 'd0000000-0000-0000-0000-000000000005', organizationId: orgId, name: 'People & Culture (HR)', department: 'Human Resources', leaderId: 'c0000000-0000-0000-0000-000000000013', description: 'Talent acquisition, employee relations, benefits, and culture programs.', status: EntityStatus.ACTIVE, createdAt: '2023-07-05T08:00:00Z', updatedAt: now },
+      { id: 'd0000000-0000-0000-0000-000000000006', organizationId: orgId, name: 'Product Strategy & Management', department: 'Product Management', leaderId: 'c0000000-0000-0000-0000-000000000014', description: 'Product roadmap planning, OKR tracking, and cross-functional collaboration.', status: EntityStatus.ACTIVE, createdAt: '2023-08-05T08:00:00Z', updatedAt: now },
+      { id: 'd0000000-0000-0000-0000-000000000007', organizationId: orgId, name: 'DevOps & Cloud Infrastructure', department: 'DevOps & Infrastructure', leaderId: 'c0000000-0000-0000-0000-000000000015', description: 'CI/CD pipelines, container orchestration, and production monitoring.', status: EntityStatus.ACTIVE, createdAt: '2023-09-05T08:00:00Z', updatedAt: now }
+    );
+
+    // --- 16d. New Team Members ---
+    this.teamMembers.push(
+      // Marketing team
+      { id: 'e0000000-0000-0000-0000-000000000007', teamId: 'd0000000-0000-0000-0000-000000000004', employeeId: 'c0000000-0000-0000-0000-000000000017', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-05-11T08:00:00Z', createdAt: '2023-05-11T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000008', teamId: 'd0000000-0000-0000-0000-000000000004', employeeId: 'c0000000-0000-0000-0000-000000000018', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-06-06T08:00:00Z', createdAt: '2023-06-06T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000009', teamId: 'd0000000-0000-0000-0000-000000000004', employeeId: 'c0000000-0000-0000-0000-000000000033', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2024-03-02T08:00:00Z', createdAt: '2024-03-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000010', teamId: 'd0000000-0000-0000-0000-000000000004', employeeId: 'c0000000-0000-0000-0000-000000000038', roleInTeam: 'INTERN', status: EntityStatus.ACTIVE, joinedAt: '2024-06-11T08:00:00Z', createdAt: '2024-06-11T08:00:00Z', updatedAt: now },
+      // HR team
+      { id: 'e0000000-0000-0000-0000-000000000011', teamId: 'd0000000-0000-0000-0000-000000000005', employeeId: 'c0000000-0000-0000-0000-000000000019', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-04-02T08:00:00Z', createdAt: '2023-04-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000012', teamId: 'd0000000-0000-0000-0000-000000000005', employeeId: 'c0000000-0000-0000-0000-000000000020', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-04-16T08:00:00Z', createdAt: '2023-04-16T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000013', teamId: 'd0000000-0000-0000-0000-000000000005', employeeId: 'c0000000-0000-0000-0000-000000000035', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2024-04-02T08:00:00Z', createdAt: '2024-04-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000014', teamId: 'd0000000-0000-0000-0000-000000000005', employeeId: 'c0000000-0000-0000-0000-000000000039', roleInTeam: 'INTERN', status: EntityStatus.ACTIVE, joinedAt: '2024-07-02T08:00:00Z', createdAt: '2024-07-02T08:00:00Z', updatedAt: now },
+      // Product team
+      { id: 'e0000000-0000-0000-0000-000000000015', teamId: 'd0000000-0000-0000-0000-000000000006', employeeId: 'c0000000-0000-0000-0000-000000000021', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-07-11T08:00:00Z', createdAt: '2023-07-11T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000016', teamId: 'd0000000-0000-0000-0000-000000000006', employeeId: 'c0000000-0000-0000-0000-000000000022', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-08-02T08:00:00Z', createdAt: '2023-08-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000017', teamId: 'd0000000-0000-0000-0000-000000000006', employeeId: 'c0000000-0000-0000-0000-000000000051', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2024-06-02T08:00:00Z', createdAt: '2024-06-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000018', teamId: 'd0000000-0000-0000-0000-000000000006', employeeId: 'c0000000-0000-0000-0000-000000000042', roleInTeam: 'INTERN', status: EntityStatus.ACTIVE, joinedAt: '2024-08-11T08:00:00Z', createdAt: '2024-08-11T08:00:00Z', updatedAt: now },
+      // DevOps team
+      { id: 'e0000000-0000-0000-0000-000000000019', teamId: 'd0000000-0000-0000-0000-000000000007', employeeId: 'c0000000-0000-0000-0000-000000000025', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-10-16T08:00:00Z', createdAt: '2023-10-16T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000020', teamId: 'd0000000-0000-0000-0000-000000000007', employeeId: 'c0000000-0000-0000-0000-000000000026', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-11-02T08:00:00Z', createdAt: '2023-11-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000021', teamId: 'd0000000-0000-0000-0000-000000000007', employeeId: 'c0000000-0000-0000-0000-000000000049', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2024-05-11T08:00:00Z', createdAt: '2024-05-11T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000022', teamId: 'd0000000-0000-0000-0000-000000000007', employeeId: 'c0000000-0000-0000-0000-000000000045', roleInTeam: 'INTERN', status: EntityStatus.ACTIVE, joinedAt: '2024-09-11T08:00:00Z', createdAt: '2024-09-11T08:00:00Z', updatedAt: now },
+      // Additional Engineering team members
+      { id: 'e0000000-0000-0000-0000-000000000023', teamId: 'd0000000-0000-0000-0000-000000000001', employeeId: 'c0000000-0000-0000-0000-000000000010', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2024-01-02T08:00:00Z', createdAt: '2024-01-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000024', teamId: 'd0000000-0000-0000-0000-000000000001', employeeId: 'c0000000-0000-0000-0000-000000000011', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2024-01-06T08:00:00Z', createdAt: '2024-01-06T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000025', teamId: 'd0000000-0000-0000-0000-000000000001', employeeId: 'c0000000-0000-0000-0000-000000000016', roleInTeam: 'MEMBER', status: EntityStatus.ACTIVE, joinedAt: '2023-05-02T08:00:00Z', createdAt: '2023-05-02T08:00:00Z', updatedAt: now },
+      { id: 'e0000000-0000-0000-0000-000000000026', teamId: 'd0000000-0000-0000-0000-000000000001', employeeId: 'c0000000-0000-0000-0000-000000000036', roleInTeam: 'INTERN', status: EntityStatus.ACTIVE, joinedAt: '2024-06-02T08:00:00Z', createdAt: '2024-06-02T08:00:00Z', updatedAt: now }
+    );
+
+    // --- 16e. New Projects ---
+    const p5Id = 'f0000000-0000-0000-0000-000000000005';
+    const p6Id = 'f0000000-0000-0000-0000-000000000006';
+    const p7Id = 'f0000000-0000-0000-0000-000000000007';
+    const p8Id = 'f0000000-0000-0000-0000-000000000008';
+
+    this.projects.push(
+      { id: p5Id, organizationId: orgId, name: 'Corporate Marketing Website Relaunch', code: 'PRJ-MKT-05', description: 'Complete redesign of the public-facing corporate website with new brand identity, SEO optimization, and CMS integration.', department: 'Marketing', teamId: 'd0000000-0000-0000-0000-000000000004', leaderId: 'c0000000-0000-0000-0000-000000000012', status: 'ACTIVE', priority: 'HIGH', startDate: '2026-08-01', targetDate: '2026-11-30', createdAt: '2026-08-01T08:00:00Z', updatedAt: now },
+      { id: p6Id, organizationId: orgId, name: 'Employee Onboarding & HRMS Digitization', code: 'PRJ-HR-06', description: 'Build digital onboarding workflows, automated contract generation, and employee self-service HR portal.', department: 'Human Resources', teamId: 'd0000000-0000-0000-0000-000000000005', leaderId: 'c0000000-0000-0000-0000-000000000013', status: 'ACTIVE', priority: 'HIGH', startDate: '2026-07-15', targetDate: '2026-12-15', createdAt: '2026-07-15T08:00:00Z', updatedAt: now },
+      { id: p7Id, organizationId: orgId, name: 'AI-Powered Product Analytics Dashboard', code: 'PRJ-PM-07', description: 'Implement real-time product analytics with AI-driven insights, funnel visualization, and predictive churn modeling.', department: 'Product Management', teamId: 'd0000000-0000-0000-0000-000000000006', leaderId: 'c0000000-0000-0000-0000-000000000014', status: 'ACTIVE', priority: 'CRITICAL', startDate: '2026-09-01', targetDate: '2026-12-31', createdAt: '2026-09-01T08:00:00Z', updatedAt: now },
+      { id: p8Id, organizationId: orgId, name: 'Kubernetes Migration & Zero-Downtime Deployment', code: 'PRJ-OPS-08', description: 'Migrate all microservices from Docker Compose to Kubernetes with Helm charts, auto-scaling, and zero-downtime rolling deployments.', department: 'DevOps & Infrastructure', teamId: 'd0000000-0000-0000-0000-000000000007', leaderId: 'c0000000-0000-0000-0000-000000000015', status: 'ACTIVE', priority: 'CRITICAL', startDate: '2026-09-15', targetDate: '2027-01-31', createdAt: '2026-09-15T08:00:00Z', updatedAt: now }
+    );
+
+    // --- 16f. Massive Task Expansion ---
+    // Leader IDs
+    const mktLeaderUserId = 'b0000000-0000-0000-0000-000000000012'; // Priya Mehta
+    const hrLeaderUserId = 'b0000000-0000-0000-0000-000000000013'; // James Foster
+    const pmLeaderUserId = 'b0000000-0000-0000-0000-000000000014'; // Linda Park
+    const opsLeaderUserId = 'b0000000-0000-0000-0000-000000000015'; // Carlos Reyes
+    // Employee IDs (new)
+    const isabellaId = 'c0000000-0000-0000-0000-000000000017';
+    const noahId = 'c0000000-0000-0000-0000-000000000018';
+    const sophiaHRId = 'c0000000-0000-0000-0000-000000000019';
+    const ethanId = 'c0000000-0000-0000-0000-000000000020';
+    const miaId = 'c0000000-0000-0000-0000-000000000021';
+    const lucaId = 'c0000000-0000-0000-0000-000000000022';
+    const avaId = 'c0000000-0000-0000-0000-000000000023';
+    const masonId = 'c0000000-0000-0000-0000-000000000024';
+    const charlotteId = 'c0000000-0000-0000-0000-000000000025';
+    const jamesNId = 'c0000000-0000-0000-0000-000000000026';
+    const ameliaId = 'c0000000-0000-0000-0000-000000000027';
+    const benjaminId = 'c0000000-0000-0000-0000-000000000028';
+    const zoeId = 'c0000000-0000-0000-0000-000000000029';
+    const danielId = 'c0000000-0000-0000-0000-000000000030';
+    const graceId = 'c0000000-0000-0000-0000-000000000031';
+    const henryId = 'c0000000-0000-0000-0000-000000000032';
+    const chloeId = 'c0000000-0000-0000-0000-000000000033';
+    const ryanId = 'c0000000-0000-0000-0000-000000000034';
+    const zaraId = 'c0000000-0000-0000-0000-000000000047';
+    const maxCId = 'c0000000-0000-0000-0000-000000000048';
+    const sophieOpsId = 'c0000000-0000-0000-0000-000000000049';
+    const tomId = 'c0000000-0000-0000-0000-000000000050';
+    const dianaId = 'c0000000-0000-0000-0000-000000000051';
+    // Intern IDs (new)
+    const finnId = 'c0000000-0000-0000-0000-000000000036';
+    const ariaId = 'c0000000-0000-0000-0000-000000000037';
+    const leoId = 'c0000000-0000-0000-0000-000000000038';
+    const mayaId = 'c0000000-0000-0000-0000-000000000039';
+    const jakeId = 'c0000000-0000-0000-0000-000000000040';
+    const emmaId = 'c0000000-0000-0000-0000-000000000041';
+    const samId = 'c0000000-0000-0000-0000-000000000042';
+    const noraId = 'c0000000-0000-0000-0000-000000000043';
+    const alexMId = 'c0000000-0000-0000-0000-000000000044';
+    const rubyId = 'c0000000-0000-0000-0000-000000000045';
+    const kaiId = 'c0000000-0000-0000-0000-000000000046';
+
+    // === PROJECT 5: Marketing Website Relaunch ===
+    this.tasks.push(
+      { id: '50000000-0000-0000-0000-000000000001', organizationId: orgId, projectId: p5Id, title: 'Brand Identity Audit & Style Guide Definition', description: 'Audit existing brand assets, define new corporate colors, typography system, and visual identity guidelines.', priority: 'HIGH', startDate: '2026-08-01', dueDate: '2026-08-10', assignedTo: isabellaId, status: TaskStatus.COMPLETED, orderIndex: 1, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Brand style guide v1.0 finalized and approved.', submittedAt: '2026-08-09T16:00:00Z', reviewedAt: '2026-08-10T10:00:00Z', reviewedBy: mktLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: isabellaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Isabella Moore', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Brand strategy ownership', timestamp: '2026-08-01T09:00:00Z' }], createdAt: '2026-08-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000002', organizationId: orgId, projectId: p5Id, title: 'Homepage Wireframes & Figma Prototypes', description: 'Design high-fidelity wireframes for homepage, services pages, and contact forms with responsive breakpoints.', priority: 'HIGH', startDate: '2026-08-10', dueDate: '2026-08-22', assignedTo: graceId, status: TaskStatus.COMPLETED, orderIndex: 2, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'All key page wireframes delivered with mobile-first approach.', submittedAt: '2026-08-21T15:00:00Z', reviewedAt: '2026-08-22T11:00:00Z', reviewedBy: mktLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: graceId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Grace Cooper', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Senior UX design ownership', timestamp: '2026-08-10T09:00:00Z' }], createdAt: '2026-08-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000003', organizationId: orgId, projectId: p5Id, title: 'SEO Strategy & Keyword Research Report', description: 'Research target keywords, competitive gaps, and produce a 6-month SEO content strategy document.', priority: 'NORMAL', startDate: '2026-08-05', dueDate: '2026-08-15', assignedTo: chloeId, status: TaskStatus.COMPLETED, orderIndex: 3, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Keyword research and SEO strategy finalized.', submittedAt: '2026-08-14T17:00:00Z', reviewedAt: '2026-08-15T09:00:00Z', reviewedBy: mktLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: chloeId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Chloe Morris', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'SEO specialist assignment', timestamp: '2026-08-05T09:00:00Z' }], createdAt: '2026-08-05T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000004', organizationId: orgId, projectId: p5Id, title: 'React Website Frontend Development — Phase 1', description: 'Build the homepage, navigation, footer, and core shared components using Next.js with TypeScript.', priority: 'HIGH', startDate: '2026-08-22', dueDate: '2026-09-10', assignedTo: noahId, status: TaskStatus.COMPLETED, orderIndex: 4, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Phase 1 frontend complete. All components are responsive and tested on Chrome/Firefox/Safari.', submittedAt: '2026-09-09T16:30:00Z', reviewedAt: '2026-09-10T10:00:00Z', reviewedBy: mktLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: noahId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Noah Wright', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Lead frontend developer assignment', timestamp: '2026-08-22T09:00:00Z' }], createdAt: '2026-08-22T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000005', organizationId: orgId, projectId: p5Id, title: 'CMS Integration with Strapi & Content Migration', description: 'Set up Strapi headless CMS, define content types, and migrate all existing website content.', priority: 'HIGH', startDate: '2026-09-10', dueDate: '2026-09-25', assignedTo: isabellaId, status: TaskStatus.IN_PROGRESS, orderIndex: 5, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: isabellaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Isabella Moore', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'CMS ownership', timestamp: '2026-09-10T09:00:00Z' }], createdAt: '2026-09-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000006', organizationId: orgId, projectId: p5Id, title: 'Marketing Intern: Social Media Graphic Assets', description: 'Design 20 social media post templates aligned with the new brand identity for LinkedIn, Twitter, and Instagram.', priority: 'NORMAL', startDate: '2026-09-01', dueDate: '2026-09-15', assignedTo: leoId, status: TaskStatus.SUBMITTED, orderIndex: 6, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Completed all 20 social media templates in Canva and exported to Figma.', submittedAt: '2026-09-14T17:00:00Z', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: leoId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Leo Garcia', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Intern graphics assignment', timestamp: '2026-09-01T09:00:00Z' }], createdAt: '2026-09-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000007', organizationId: orgId, projectId: p5Id, title: 'Google Analytics 4 & Tag Manager Setup', description: 'Implement GA4, configure conversion tracking, and set up automated monthly traffic reports.', priority: 'NORMAL', startDate: '2026-09-20', dueDate: '2026-09-30', assignedTo: chloeId, status: TaskStatus.ASSIGNED, orderIndex: 7, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: chloeId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Chloe Morris', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Analytics setup ownership', timestamp: '2026-09-20T09:00:00Z' }], createdAt: '2026-09-20T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000008', organizationId: orgId, projectId: p5Id, title: 'Blog Content Production — Q4 Editorial Calendar', description: 'Write 8 long-form blog articles (1,500+ words each) covering industry trends and product announcements.', priority: 'NORMAL', startDate: '2026-10-01', dueDate: '2026-11-01', assignedTo: noahId, status: TaskStatus.ASSIGNED, orderIndex: 8, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: noahId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Noah Wright', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Content strategy ownership', timestamp: '2026-10-01T09:00:00Z' }], createdAt: '2026-10-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000009', organizationId: orgId, projectId: p5Id, title: 'Website Performance Optimization & Core Web Vitals', description: 'Achieve LCP < 2.5s, FID < 100ms, CLS < 0.1 across all pages using Lighthouse audits.', priority: 'HIGH', startDate: '2026-10-15', dueDate: '2026-11-05', assignedTo: null, status: TaskStatus.UNASSIGNED, orderIndex: 9, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-10-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '50000000-0000-0000-0000-000000000010', organizationId: orgId, projectId: p5Id, title: 'Email Campaign Automation — Welcome & Nurture Series', description: 'Build 5-email welcome drip campaign and 3-email nurture sequence in HubSpot.', priority: 'NORMAL', startDate: '2026-10-10', dueDate: '2026-10-30', assignedTo: isabellaId, status: TaskStatus.IN_PROGRESS, orderIndex: 10, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: isabellaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Isabella Moore', changedBy: mktLeaderUserId, changedByName: 'Priya Mehta', reason: 'Email marketing ownership', timestamp: '2026-10-10T09:00:00Z' }], createdAt: '2026-10-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+
+      // === PROJECT 6: HR Onboarding & HRMS ===
+      { id: '60000000-0000-0000-0000-000000000001', organizationId: orgId, projectId: p6Id, title: 'HR Process Audit & Digital Gap Analysis', description: 'Document all manual HR workflows, identify automation opportunities, and create a digital transformation roadmap.', priority: 'HIGH', startDate: '2026-07-15', dueDate: '2026-07-30', assignedTo: sophiaHRId, status: TaskStatus.COMPLETED, orderIndex: 1, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Process audit complete. 12 workflows mapped for automation.', submittedAt: '2026-07-29T16:00:00Z', reviewedAt: '2026-07-30T10:00:00Z', reviewedBy: hrLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: sophiaHRId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Sophia Turner', changedBy: hrLeaderUserId, changedByName: 'James Foster', reason: 'HR process expert', timestamp: '2026-07-15T09:00:00Z' }], createdAt: '2026-07-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000002', organizationId: orgId, projectId: p6Id, title: 'Digital Onboarding Portal — Employee Self-Service Module', description: 'Build employee self-service portal for document upload, policy acknowledgements, and equipment requests.', priority: 'CRITICAL', startDate: '2026-08-01', dueDate: '2026-09-01', assignedTo: ethanId, status: TaskStatus.COMPLETED, orderIndex: 2, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Self-service module deployed to staging. All 8 workflows functional.', submittedAt: '2026-08-31T17:00:00Z', reviewedAt: '2026-09-01T11:00:00Z', reviewedBy: hrLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: ethanId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Ethan Brooks', changedBy: hrLeaderUserId, changedByName: 'James Foster', reason: 'Talent portal lead', timestamp: '2026-08-01T09:00:00Z' }], createdAt: '2026-08-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000003', organizationId: orgId, projectId: p6Id, title: 'Automated Contract & Offer Letter Generation', description: 'Build templated PDF generation system for employment contracts using DocuSign API integration.', priority: 'HIGH', startDate: '2026-09-01', dueDate: '2026-09-20', assignedTo: sophiaHRId, status: TaskStatus.SUBMITTED, orderIndex: 3, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'DocuSign integration complete. Templates created for 5 employment types.', submittedAt: '2026-09-19T16:00:00Z', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: sophiaHRId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Sophia Turner', changedBy: hrLeaderUserId, changedByName: 'James Foster', reason: 'Contracts expertise', timestamp: '2026-09-01T09:00:00Z' }], createdAt: '2026-09-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000004', organizationId: orgId, projectId: p6Id, title: 'HR Intern: Employee Handbook 2027 Update', description: 'Update the employee handbook with new remote work policies, compensation structure, and DEI guidelines.', priority: 'NORMAL', startDate: '2026-09-05', dueDate: '2026-09-25', assignedTo: mayaId, status: TaskStatus.REVISION_REQUIRED, orderIndex: 4, isTodayWork: true, dailyWorkDate: '2026-10-21', submissionMessage: 'Draft handbook submitted for review.', submittedAt: '2026-09-24T15:00:00Z', reviewFeedback: 'Please expand the DEI section with updated statistics and add new parental leave policy details.', reviewedAt: '2026-09-25T10:00:00Z', reviewedBy: hrLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: mayaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Maya Patel', changedBy: hrLeaderUserId, changedByName: 'James Foster', reason: 'HR intern writing assignment', timestamp: '2026-09-05T09:00:00Z' }], createdAt: '2026-09-05T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000005', organizationId: orgId, projectId: p6Id, title: 'Payroll Integration & Benefits Enrollment Automation', description: 'Integrate ADP payroll system with HRMS for automated salary processing and benefits enrollment sync.', priority: 'CRITICAL', startDate: '2026-09-15', dueDate: '2026-10-15', assignedTo: ethanId, status: TaskStatus.IN_PROGRESS, orderIndex: 5, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: ethanId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Ethan Brooks', changedBy: hrLeaderUserId, changedByName: 'James Foster', reason: 'Payroll system integration', timestamp: '2026-09-15T09:00:00Z' }], createdAt: '2026-09-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000006', organizationId: orgId, projectId: p6Id, title: 'Performance Review Cycle Automation', description: 'Build quarterly review workflow with 360-degree feedback forms, manager scoring, and automated reminders.', priority: 'HIGH', startDate: '2026-10-01', dueDate: '2026-11-01', assignedTo: sophiaHRId, status: TaskStatus.ASSIGNED, orderIndex: 6, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: sophiaHRId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Sophia Turner', changedBy: hrLeaderUserId, changedByName: 'James Foster', reason: 'Performance management lead', timestamp: '2026-10-01T09:00:00Z' }], createdAt: '2026-10-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000007', organizationId: orgId, projectId: p6Id, title: 'Learning & Development Budget Tracking Dashboard', description: 'Build L&D spend tracker with department budgets, course cost allocation, and certification ROI reporting.', priority: 'NORMAL', startDate: '2026-10-10', dueDate: '2026-11-10', assignedTo: null, status: TaskStatus.UNASSIGNED, orderIndex: 7, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-10-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '60000000-0000-0000-0000-000000000008', organizationId: orgId, projectId: p6Id, title: 'Exit Interview Process & Analytics System', description: 'Design structured exit interview questionnaire and build analytics dashboard for turnover insights.', priority: 'NORMAL', startDate: '2026-11-01', dueDate: '2026-11-30', assignedTo: null, status: TaskStatus.UNASSIGNED, orderIndex: 8, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-11-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+
+      // === PROJECT 7: AI Analytics Dashboard ===
+      { id: '70000000-0000-0000-0000-000000000001', organizationId: orgId, projectId: p7Id, title: 'Product Analytics Requirements & KPI Definition', description: 'Gather stakeholder requirements for analytics dashboards, define 25+ KPIs, and create data dictionary.', priority: 'CRITICAL', startDate: '2026-09-01', dueDate: '2026-09-12', assignedTo: miaId, status: TaskStatus.COMPLETED, orderIndex: 1, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'KPI framework completed. 28 metrics defined across acquisition, engagement, and retention funnels.', submittedAt: '2026-09-11T17:00:00Z', reviewedAt: '2026-09-12T10:00:00Z', reviewedBy: pmLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: miaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Mia Carter', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'Senior PM ownership', timestamp: '2026-09-01T09:00:00Z' }], createdAt: '2026-09-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000002', organizationId: orgId, projectId: p7Id, title: 'Data Pipeline Architecture & ETL Design', description: 'Design real-time data pipeline using Apache Kafka, dbt transformations, and Snowflake data warehouse.', priority: 'CRITICAL', startDate: '2026-09-10', dueDate: '2026-09-25', assignedTo: benjaminId, status: TaskStatus.COMPLETED, orderIndex: 2, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'ETL architecture designed and approved. Kafka topics provisioned.', submittedAt: '2026-09-24T16:00:00Z', reviewedAt: '2026-09-25T10:00:00Z', reviewedBy: pmLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: benjaminId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Benjamin Harris', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'Data engineering lead', timestamp: '2026-09-10T09:00:00Z' }], createdAt: '2026-09-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000003', organizationId: orgId, projectId: p7Id, title: 'AI Churn Prediction Model Development', description: 'Train and validate gradient boosting churn model with 90-day prediction window and feature importance analysis.', priority: 'CRITICAL', startDate: '2026-09-25', dueDate: '2026-10-20', assignedTo: maxCId, status: TaskStatus.IN_PROGRESS, orderIndex: 3, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: maxCId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Max Chen', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'AI/ML engineer ownership', timestamp: '2026-09-25T09:00:00Z' }], createdAt: '2026-09-25T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000004', organizationId: orgId, projectId: p7Id, title: 'Analytics Dashboard Frontend — React & Recharts', description: 'Build interactive analytics dashboard with Recharts visualizations, date range filters, and CSV export.', priority: 'HIGH', startDate: '2026-09-20', dueDate: '2026-10-15', assignedTo: avaId, status: TaskStatus.SUBMITTED, orderIndex: 4, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Dashboard MVP complete with 6 chart types, filters, and CSV export functionality.', submittedAt: '2026-10-14T17:00:00Z', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: avaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Ava Johnson', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'React engineer assignment', timestamp: '2026-09-20T09:00:00Z' }], createdAt: '2026-09-20T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000005', organizationId: orgId, projectId: p7Id, title: 'Product Analytics API — NestJS Backend Services', description: 'Build REST API endpoints for aggregated metrics, cohort analysis, funnel computation, and retention curves.', priority: 'HIGH', startDate: '2026-09-25', dueDate: '2026-10-20', assignedTo: masonId, status: TaskStatus.IN_PROGRESS, orderIndex: 5, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: masonId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Mason Lee', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'Backend API ownership', timestamp: '2026-09-25T09:00:00Z' }], createdAt: '2026-09-25T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000006', organizationId: orgId, projectId: p7Id, title: 'PM Intern: Competitive Analysis & Benchmark Report', description: 'Research 5 competitor analytics products, create feature comparison matrix, and pricing benchmark analysis.', priority: 'NORMAL', startDate: '2026-09-15', dueDate: '2026-09-30', assignedTo: samId, status: TaskStatus.COMPLETED, orderIndex: 6, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Competitive analysis complete with 5 competitors benchmarked across 30 features.', submittedAt: '2026-09-29T15:00:00Z', reviewedAt: '2026-09-30T11:00:00Z', reviewedBy: pmLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: samId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Sam Anderson', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'PM intern research task', timestamp: '2026-09-15T09:00:00Z' }], createdAt: '2026-09-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000007', organizationId: orgId, projectId: p7Id, title: 'A/B Testing Framework Integration', description: 'Integrate LaunchDarkly feature flags with analytics pipeline for statistically significant A/B test tracking.', priority: 'HIGH', startDate: '2026-10-15', dueDate: '2026-11-05', assignedTo: lucaId, status: TaskStatus.ASSIGNED, orderIndex: 7, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: lucaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Luca Romano', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'Product analytics ownership', timestamp: '2026-10-15T09:00:00Z' }], createdAt: '2026-10-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000008', organizationId: orgId, projectId: p7Id, title: 'Predictive Revenue Forecasting Module', description: 'Build ML-powered revenue forecasting with 12-month projections and confidence interval visualization.', priority: 'CRITICAL', startDate: '2026-10-20', dueDate: '2026-11-20', assignedTo: maxCId, status: TaskStatus.ASSIGNED, orderIndex: 8, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: maxCId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Max Chen', changedBy: pmLeaderUserId, changedByName: 'Linda Park', reason: 'AI/ML specialist', timestamp: '2026-10-20T09:00:00Z' }], createdAt: '2026-10-20T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '70000000-0000-0000-0000-000000000009', organizationId: orgId, projectId: p7Id, title: 'Dashboard Accessibility & WCAG 2.2 Compliance Audit', description: 'Audit all dashboard components for keyboard navigation, screen reader support, and color contrast compliance.', priority: 'HIGH', startDate: '2026-11-01', dueDate: '2026-11-15', assignedTo: null, status: TaskStatus.UNASSIGNED, orderIndex: 9, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-11-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+
+      // === PROJECT 8: Kubernetes Migration ===
+      { id: '80000000-0000-0000-0000-000000000001', organizationId: orgId, projectId: p8Id, title: 'Kubernetes Cluster Architecture Design & Resource Planning', description: 'Design multi-region EKS cluster topology, node pools, namespace strategy, and resource quota planning.', priority: 'CRITICAL', startDate: '2026-09-15', dueDate: '2026-09-28', assignedTo: charlotteId, status: TaskStatus.COMPLETED, orderIndex: 1, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Cluster architecture approved. 3-region setup with auto-scaling groups configured.', submittedAt: '2026-09-27T17:00:00Z', reviewedAt: '2026-09-28T10:00:00Z', reviewedBy: opsLeaderUserId, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: charlotteId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Charlotte White', changedBy: opsLeaderUserId, changedByName: 'Carlos Reyes', reason: 'DevOps cloud architect', timestamp: '2026-09-15T09:00:00Z' }], createdAt: '2026-09-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000002', organizationId: orgId, projectId: p8Id, title: 'Docker to Kubernetes Manifest Migration — 12 Microservices', description: 'Convert Docker Compose configurations to Kubernetes Deployment, Service, and ConfigMap manifests for all 12 services.', priority: 'CRITICAL', startDate: '2026-09-28', dueDate: '2026-10-15', assignedTo: jamesNId, status: TaskStatus.IN_PROGRESS, orderIndex: 2, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: jamesNId, fromEmployeeName: 'Unassigned', toEmployeeName: 'James Nelson', changedBy: opsLeaderUserId, changedByName: 'Carlos Reyes', reason: 'SRE ownership', timestamp: '2026-09-28T09:00:00Z' }], createdAt: '2026-09-28T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000003', organizationId: orgId, projectId: p8Id, title: 'Helm Charts Development & Package Repository Setup', description: 'Create Helm charts for all services with environment-specific values files (dev/staging/prod).', priority: 'HIGH', startDate: '2026-10-01', dueDate: '2026-10-18', assignedTo: sophieOpsId, status: TaskStatus.IN_PROGRESS, orderIndex: 3, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: sophieOpsId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Sophie Taylor', changedBy: opsLeaderUserId, changedByName: 'Carlos Reyes', reason: 'Kubernetes specialist', timestamp: '2026-10-01T09:00:00Z' }], createdAt: '2026-10-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000004', organizationId: orgId, projectId: p8Id, title: 'CI/CD Pipeline Migration to GitHub Actions + ArgoCD', description: 'Migrate Jenkins pipelines to GitHub Actions with ArgoCD GitOps deployments and automated rollbacks.', priority: 'CRITICAL', startDate: '2026-10-10', dueDate: '2026-10-28', assignedTo: charlotteId, status: TaskStatus.ASSIGNED, orderIndex: 4, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: charlotteId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Charlotte White', changedBy: opsLeaderUserId, changedByName: 'Carlos Reyes', reason: 'CI/CD pipeline ownership', timestamp: '2026-10-10T09:00:00Z' }], createdAt: '2026-10-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000005', organizationId: orgId, projectId: p8Id, title: 'Prometheus & Grafana Observability Stack Setup', description: 'Deploy Prometheus for metrics collection, Grafana for dashboards, and PagerDuty for alert routing.', priority: 'HIGH', startDate: '2026-10-15', dueDate: '2026-11-01', assignedTo: jamesNId, status: TaskStatus.ASSIGNED, orderIndex: 5, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: jamesNId, fromEmployeeName: 'Unassigned', toEmployeeName: 'James Nelson', changedBy: opsLeaderUserId, changedByName: 'Carlos Reyes', reason: 'Observability ownership', timestamp: '2026-10-15T09:00:00Z' }], createdAt: '2026-10-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000006', organizationId: orgId, projectId: p8Id, title: 'DevOps Intern: Kubernetes Documentation & Runbooks', description: 'Write operational runbooks for cluster scaling, incident response, and disaster recovery procedures.', priority: 'NORMAL', startDate: '2026-10-01', dueDate: '2026-10-25', assignedTo: rubyId, status: TaskStatus.SUBMITTED, orderIndex: 6, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'Runbooks completed for 8 operational scenarios including cluster scaling and database failover.', submittedAt: '2026-10-24T16:00:00Z', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: rubyId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Ruby Chen', changedBy: opsLeaderUserId, changedByName: 'Carlos Reyes', reason: 'DevOps intern documentation', timestamp: '2026-10-01T09:00:00Z' }], createdAt: '2026-10-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000007', organizationId: orgId, projectId: p8Id, title: 'Load Testing & Kubernetes HPA Validation', description: 'Run k6 load tests to validate HorizontalPodAutoscaler scaling thresholds under 10,000 concurrent users.', priority: 'HIGH', startDate: '2026-11-01', dueDate: '2026-11-15', assignedTo: sophieOpsId, status: TaskStatus.UNASSIGNED, orderIndex: 7, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-11-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '80000000-0000-0000-0000-000000000008', organizationId: orgId, projectId: p8Id, title: 'Zero-Downtime Production Cutover Plan & Execution', description: 'Plan and execute blue-green deployment migration of all production workloads with 0% downtime SLA.', priority: 'CRITICAL', startDate: '2026-11-15', dueDate: '2026-12-01', assignedTo: null, status: TaskStatus.UNASSIGNED, orderIndex: 8, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-11-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+
+      // === Extra tasks for existing Projects 1-4 (enrichment) ===
+      { id: '10000000-0000-0000-0000-000000000010', organizationId: orgId, projectId: p1Id, title: 'Real-Time Notification WebSocket Gateway', description: 'Build NestJS WebSocket gateway with Socket.io for push notifications on task updates and submissions.', priority: 'HIGH', startDate: '2026-10-01', dueDate: '2026-10-20', assignedTo: ryanId, status: TaskStatus.IN_PROGRESS, orderIndex: 16, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: ryanId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Ryan Bell', changedBy: leaderUserId, changedByName: 'Marcus Sterling', reason: 'WebSocket specialist', timestamp: '2026-10-01T09:00:00Z' }], createdAt: '2026-10-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '10000000-0000-0000-0000-000000000011', organizationId: orgId, projectId: p1Id, title: 'Multi-Tenant Organization Settings Management', description: 'Build admin panel for organization configuration: branding, allowed file types, notification preferences.', priority: 'NORMAL', startDate: '2026-10-10', dueDate: '2026-10-28', assignedTo: zaraId, status: TaskStatus.ASSIGNED, orderIndex: 17, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: zaraId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Zara Ali', changedBy: leaderUserId, changedByName: 'Marcus Sterling', reason: 'API integration specialist', timestamp: '2026-10-10T09:00:00Z' }], createdAt: '2026-10-10T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '10000000-0000-0000-0000-000000000012', organizationId: orgId, projectId: p1Id, title: 'Intern: End-to-End Cypress Testing Suite', description: 'Write Cypress E2E tests covering login, task management, submission, and review workflows.', priority: 'HIGH', startDate: '2026-10-05', dueDate: '2026-10-25', assignedTo: finnId, status: TaskStatus.IN_PROGRESS, orderIndex: 18, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: finnId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Finn Walker', changedBy: leaderUserId, changedByName: 'Marcus Sterling', reason: 'QA intern assignment', timestamp: '2026-10-05T09:00:00Z' }], createdAt: '2026-10-05T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '10000000-0000-0000-0000-000000000013', organizationId: orgId, projectId: p1Id, title: 'Employee Workload & Burnout Detection Dashboard', description: 'Build admin dashboard showing per-employee task load, overdue rates, and burnout risk scoring.', priority: 'HIGH', startDate: '2026-10-15', dueDate: '2026-11-05', assignedTo: avaId, status: TaskStatus.ASSIGNED, orderIndex: 19, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: avaId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Ava Johnson', changedBy: leaderUserId, changedByName: 'Marcus Sterling', reason: 'React dashboard expertise', timestamp: '2026-10-15T09:00:00Z' }], createdAt: '2026-10-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '10000000-0000-0000-0000-000000000014', organizationId: orgId, projectId: p1Id, title: 'File Upload & Storage Service (Supabase Storage)', description: 'Implement secure multi-file upload with file type validation, virus scanning hook, and storage URL signing.', priority: 'NORMAL', startDate: '2026-10-20', dueDate: '2026-11-05', assignedTo: null, status: TaskStatus.UNASSIGNED, orderIndex: 20, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [], createdAt: '2026-10-20T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+
+      // === Extra QA/Security Project tasks ===
+      { id: '40000000-0000-0000-0000-000000000001', organizationId: orgId, projectId: 'f0000000-0000-0000-0000-000000000004', title: 'OWASP ZAP Automated Security Scan Integration', description: 'Integrate OWASP ZAP into CI/CD pipeline to automatically scan for SQLI, XSS, and auth bypass vulnerabilities.', priority: 'CRITICAL', startDate: '2026-09-20', dueDate: '2026-10-05', assignedTo: zoeId, status: TaskStatus.COMPLETED, orderIndex: 5, isTodayWork: false, dailyWorkDate: null, submissionMessage: 'ZAP scan integrated and running on every PR. Zero critical vulnerabilities found.', submittedAt: '2026-10-04T16:00:00Z', reviewedAt: '2026-10-05T10:00:00Z', reviewedBy: 'b0000000-0000-0000-0000-000000000002', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: zoeId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Zoe Robinson', changedBy: 'b0000000-0000-0000-0000-000000000002', changedByName: 'Marcus Sterling', reason: 'Security QA specialist', timestamp: '2026-09-20T09:00:00Z' }], createdAt: '2026-09-20T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '40000000-0000-0000-0000-000000000002', organizationId: orgId, projectId: 'f0000000-0000-0000-0000-000000000004', title: 'Playwright Cross-Browser Regression Test Suite', description: 'Build Playwright tests covering Chrome, Firefox, and Safari for all critical user journeys.', priority: 'HIGH', startDate: '2026-10-01', dueDate: '2026-10-20', assignedTo: danielId, status: TaskStatus.IN_PROGRESS, orderIndex: 6, isTodayWork: true, dailyWorkDate: '2026-10-21', assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: danielId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Daniel Murphy', changedBy: 'b0000000-0000-0000-0000-000000000002', changedByName: 'Marcus Sterling', reason: 'Performance test engineer', timestamp: '2026-10-01T09:00:00Z' }], createdAt: '2026-10-01T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '40000000-0000-0000-0000-000000000003', organizationId: orgId, projectId: 'f0000000-0000-0000-0000-000000000004', title: 'QA Intern: Manual Test Cases for HR Module', description: 'Document 50+ manual test cases for the HR onboarding module covering happy paths and edge cases.', priority: 'NORMAL', startDate: '2026-10-05', dueDate: '2026-10-22', assignedTo: kaiId, status: TaskStatus.ASSIGNED, orderIndex: 7, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: kaiId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Kai Nguyen', changedBy: 'b0000000-0000-0000-0000-000000000002', changedByName: 'Marcus Sterling', reason: 'QA intern test assignment', timestamp: '2026-10-05T09:00:00Z' }], createdAt: '2026-10-05T08:00:00Z', updatedAt: now, assignedToUserId: undefined },
+      { id: '40000000-0000-0000-0000-000000000004', organizationId: orgId, projectId: 'f0000000-0000-0000-0000-000000000004', title: 'API Contract Testing with Pact Framework', description: 'Implement consumer-driven contract tests between all microservice API consumers and providers.', priority: 'HIGH', startDate: '2026-10-15', dueDate: '2026-11-01', assignedTo: tomId, status: TaskStatus.ASSIGNED, orderIndex: 8, isTodayWork: false, dailyWorkDate: null, assignmentHistory: [{ id: uuidv4(), fromEmployeeId: null, toEmployeeId: tomId, fromEmployeeName: 'Unassigned', toEmployeeName: 'Tom Black', changedBy: 'b0000000-0000-0000-0000-000000000002', changedByName: 'Marcus Sterling', reason: 'Security QA engineer', timestamp: '2026-10-15T09:00:00Z' }], createdAt: '2026-10-15T08:00:00Z', updatedAt: now, assignedToUserId: undefined }
+    );
+
     this.logger.log(`Data seeded: ${this.users.length} users, ${this.employees.length} employees, ${this.teams.length} teams, ${this.projects.length} projects, ${this.tasks.length} tasks, ${this.courses.length} courses, ${this.announcements.length} announcements, ${this.auditLogs.length} audit logs`);
   }
 
@@ -1834,6 +2101,17 @@ export class DatabaseService implements OnModuleInit {
     role?: UserRole;
     teamId?: string;
   }): Promise<EmployeeEntity> {
+    const cleanEmail = (data.email || '').trim().toLowerCase();
+    const cleanEmpId = (data.employeeId || '').trim().toUpperCase();
+
+    // Enforce uniqueness
+    if (this.users.some((u) => u.email.toLowerCase() === cleanEmail || u.employeeId.toUpperCase() === cleanEmpId)) {
+      throw new Error(`Account with email "${data.email}" or Employee ID "${data.employeeId}" already exists.`);
+    }
+    if (this.employees.some((e) => e.email.toLowerCase() === cleanEmail || e.employeeId.toUpperCase() === cleanEmpId)) {
+      throw new Error(`Employee record with email "${data.email}" or ID "${data.employeeId}" already exists.`);
+    }
+
     const now = new Date().toISOString();
     const userId = uuidv4();
     const empId = uuidv4();
@@ -1887,6 +2165,17 @@ export class DatabaseService implements OnModuleInit {
       });
     }
 
+    this.recordAuditLog({
+      organizationId: 'a0000000-0000-0000-0000-000000000001',
+      userName: 'Administrator',
+      userRole: 'ADMIN',
+      action: 'REGISTER_STAFF',
+      entity: 'STAFF',
+      entityId: empId,
+      details: `Registered ${data.fullName} (${data.employeeId}) as ${data.designation} in ${data.department}`,
+      newValue: { fullName: data.fullName, email: data.email, role: userRole },
+    });
+
     return { ...newEmp };
   }
 
@@ -1895,6 +2184,21 @@ export class DatabaseService implements OnModuleInit {
     if (index === -1) return null;
 
     const existing = this.employees[index];
+
+    // Enforce uniqueness on updates
+    if (updates.email && updates.email.toLowerCase() !== existing.email.toLowerCase()) {
+      const cleanEmail = updates.email.trim().toLowerCase();
+      if (this.employees.some((e) => e.id !== id && e.email.toLowerCase() === cleanEmail)) {
+        throw new Error(`Email "${updates.email}" is already used by another employee.`);
+      }
+    }
+    if (updates.employeeId && updates.employeeId.toUpperCase() !== existing.employeeId.toUpperCase()) {
+      const cleanEmpId = updates.employeeId.trim().toUpperCase();
+      if (this.employees.some((e) => e.id !== id && e.employeeId.toUpperCase() === cleanEmpId)) {
+        throw new Error(`Employee ID "${updates.employeeId}" is already assigned to another employee.`);
+      }
+    }
+
     const updated: EmployeeEntity = {
       ...existing,
       ...updates,
@@ -1911,6 +2215,18 @@ export class DatabaseService implements OnModuleInit {
         this.users[uIndex].updatedAt = new Date().toISOString();
       }
     }
+
+    this.recordAuditLog({
+      organizationId: 'a0000000-0000-0000-0000-000000000001',
+      userName: 'Administrator',
+      userRole: 'ADMIN',
+      action: 'UPDATE_STAFF',
+      entity: 'STAFF',
+      entityId: id,
+      details: `Updated details for ${updated.fullName} (${updated.employeeId})`,
+      previousValue: existing,
+      newValue: updated,
+    });
 
     return { ...updated };
   }
@@ -1944,7 +2260,39 @@ export class DatabaseService implements OnModuleInit {
       if (t.leaderId === id) t.leaderId = null;
     });
 
+    // Unassign tasks assigned to this employee
+    this.tasks.forEach((t) => {
+      if (t.assignedTo === id) {
+        t.assignedTo = null as any;
+        t.updatedAt = new Date().toISOString();
+      }
+    });
+
+    // Remove project leader reference if leading any project
+    this.projects.forEach((p) => {
+      if (p.leaderId === id) p.leaderId = null;
+    });
+
+    // Remove course enrollments
+    this.courseEnrollments = this.courseEnrollments.filter((ce) => ce.employeeId !== id);
+
+    // Remove user-specific notifications
+    if (emp.userId) {
+      this.notifications = this.notifications.filter((n) => n.userId !== emp.userId);
+    }
+
     this.employees.splice(index, 1);
+
+    this.recordAuditLog({
+      organizationId: 'a0000000-0000-0000-0000-000000000001',
+      userName: 'Administrator',
+      userRole: 'ADMIN',
+      action: 'DELETE_STAFF',
+      entity: 'STAFF',
+      entityId: id,
+      details: `Removed employee ${emp.fullName} (${emp.employeeId}) from directory`,
+    });
+
     return true;
   }
 
@@ -2080,12 +2428,12 @@ export class DatabaseService implements OnModuleInit {
         ...team,
         leader: leader
           ? {
-              id: leader.id,
-              fullName: leader.fullName,
-              email: leader.email,
-              employeeId: leader.employeeId,
-              profilePhotoUrl: leader.profilePhotoUrl,
-            }
+            id: leader.id,
+            fullName: leader.fullName,
+            email: leader.email,
+            employeeId: leader.employeeId,
+            profilePhotoUrl: leader.profilePhotoUrl,
+          }
           : null,
         membersCount: members.length,
         members,
@@ -2124,12 +2472,12 @@ export class DatabaseService implements OnModuleInit {
       ...team,
       leader: leader
         ? {
-            id: leader.id,
-            fullName: leader.fullName,
-            email: leader.email,
-            employeeId: leader.employeeId,
-            profilePhotoUrl: leader.profilePhotoUrl,
-          }
+          id: leader.id,
+          fullName: leader.fullName,
+          email: leader.email,
+          employeeId: leader.employeeId,
+          profilePhotoUrl: leader.profilePhotoUrl,
+        }
         : null,
       membersCount: members.length,
       members,
@@ -2299,8 +2647,8 @@ export class DatabaseService implements OnModuleInit {
       const leader = p.leaderId
         ? this.employees.find((e) => e.id === p.leaderId)
         : team?.leaderId
-        ? this.employees.find((e) => e.id === team.leaderId)
-        : null;
+          ? this.employees.find((e) => e.id === team.leaderId)
+          : null;
 
       const projectTasks = this.tasks.filter((t) => t.projectId === p.id);
       const totalTasks = projectTasks.length;
@@ -2349,8 +2697,8 @@ export class DatabaseService implements OnModuleInit {
     const leader = project.leaderId
       ? this.employees.find((e) => e.id === project.leaderId)
       : team?.leaderId
-      ? this.employees.find((e) => e.id === team.leaderId)
-      : null;
+        ? this.employees.find((e) => e.id === team.leaderId)
+        : null;
 
     const projectTasks = this.tasks
       .filter((t) => t.projectId === project.id)
@@ -2439,6 +2787,7 @@ export class DatabaseService implements OnModuleInit {
             assignmentHistory: [],
             createdAt: now,
             updatedAt: now,
+            assignedToUserId: undefined
           });
         });
       }
@@ -2535,14 +2884,14 @@ export class DatabaseService implements OnModuleInit {
         projectCode: project ? project.code : '',
         assignedEmployee: assignedEmp
           ? {
-              id: assignedEmp.id,
-              fullName: assignedEmp.fullName,
-              employeeId: assignedEmp.employeeId,
-              email: assignedEmp.email,
-              designation: assignedEmp.designation,
-              employeeType: assignedEmp.employeeType,
-              profilePhotoUrl: assignedEmp.profilePhotoUrl,
-            }
+            id: assignedEmp.id,
+            fullName: assignedEmp.fullName,
+            employeeId: assignedEmp.employeeId,
+            email: assignedEmp.email,
+            designation: assignedEmp.designation,
+            employeeType: assignedEmp.employeeType,
+            profilePhotoUrl: assignedEmp.profilePhotoUrl,
+          }
           : null,
         dependsOnTask: dependsOn
           ? { id: dependsOn.id, title: dependsOn.title, status: dependsOn.status }
@@ -2577,14 +2926,14 @@ export class DatabaseService implements OnModuleInit {
       projectCode: project ? project.code : '',
       assignedEmployee: assignedEmp
         ? {
-            id: assignedEmp.id,
-            fullName: assignedEmp.fullName,
-            employeeId: assignedEmp.employeeId,
-            email: assignedEmp.email,
-            designation: assignedEmp.designation,
-            employeeType: assignedEmp.employeeType,
-            profilePhotoUrl: assignedEmp.profilePhotoUrl,
-          }
+          id: assignedEmp.id,
+          fullName: assignedEmp.fullName,
+          employeeId: assignedEmp.employeeId,
+          email: assignedEmp.email,
+          designation: assignedEmp.designation,
+          employeeType: assignedEmp.employeeType,
+          profilePhotoUrl: assignedEmp.profilePhotoUrl,
+        }
         : null,
       dependsOnTask: dependsOn
         ? { id: dependsOn.id, title: dependsOn.title, status: dependsOn.status }
@@ -2615,6 +2964,7 @@ export class DatabaseService implements OnModuleInit {
       assignmentHistory: data.assignmentHistory || [],
       createdAt: now,
       updatedAt: now,
+      assignedToUserId: undefined
     };
 
     if (assigned && data.assignedTo) {
@@ -2694,6 +3044,7 @@ export class DatabaseService implements OnModuleInit {
         assignmentHistory: history,
         createdAt: now,
         updatedAt: now,
+        assignedToUserId: undefined
       };
 
       this.tasks.push(newTask);
@@ -3132,13 +3483,27 @@ export class DatabaseService implements OnModuleInit {
     const totalAllTasks = this.tasks.length || 1;
     const completedAllTasks = this.tasks.filter((t) => t.status === TaskStatus.COMPLETED || t.status === TaskStatus.APPROVED).length;
 
-    const recentActivities = [
-      { id: '1', user: 'Alexander Vance (Admin)', action: 'Created project task plan for Enterprise Portal 2.0', time: '10 mins ago', type: 'PROJECT' },
-      { id: '2', user: 'Marcus Sterling (Lead)', action: 'Dispatched 3 tasks to Today\'s Work workstation', time: '25 mins ago', type: 'WORK' },
-      { id: '3', user: 'Sarah Jenkins (Lead)', action: 'Assigned Design Token System to Elena Rostova', time: '1 hour ago', type: 'ASSIGNMENT' },
-      { id: '4', user: 'Jonathan Reed (Dev)', action: 'Completed Task: Requirement Analysis & Signoff', time: '2 hours ago', type: 'WORK' },
-      { id: '5', user: 'Aiden Clark (Intern)', action: 'Started work on Task Plan Builder Engine', time: '3 hours ago', type: 'WORK' },
-    ];
+    const recentActivities = this.auditLogs.slice(0, 6).map((log) => {
+      const diffMs = Math.max(0, Date.now() - new Date(log.createdAt).getTime());
+      const diffMins = Math.floor(diffMs / 60000);
+      let timeStr = 'Just now';
+      if (diffMins >= 60 * 24) {
+        const days = Math.floor(diffMins / (60 * 24));
+        timeStr = `${days}d ago`;
+      } else if (diffMins >= 60) {
+        const hours = Math.floor(diffMins / 60);
+        timeStr = `${hours}h ago`;
+      } else if (diffMins > 0) {
+        timeStr = `${diffMins}m ago`;
+      }
+      return {
+        id: log.id,
+        user: `${log.userName} (${log.userRole || 'USER'})`,
+        action: `${log.action} - ${log.entity}${log.details ? `: ${log.details}` : ''}`,
+        time: timeStr,
+        type: log.entity || 'AUDIT',
+      };
+    });
 
     return {
       cards: {

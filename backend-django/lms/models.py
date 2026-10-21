@@ -1,4 +1,5 @@
 import uuid
+# pyrefly: ignore [missing-import]
 from django.db import models
 
 class TrainingCourse(models.Model):

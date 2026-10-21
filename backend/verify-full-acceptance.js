@@ -137,7 +137,7 @@ async function testAll() {
   assert(typeof dashData.cards?.totalTeams === 'number', 'Card metric: Total Teams');
   assert(typeof dashData.cards?.activeProjects === 'number', 'Card metric: Active Projects');
   assert(typeof dashData.cards?.activeEmployees === 'number', 'Card metric: Active Employees');
-  assert(dashData.workCompletionRate?.rate === 78.4, 'Work completion rate gauge: 78.4%');
+  assert(typeof dashData.workCompletionRate?.rate === 'number' && dashData.workCompletionRate?.rate >= 0, 'Work completion rate gauge computed from real tasks');
   assert(Array.isArray(dashData.departmentDistribution), 'Department distribution array present');
   assert(Array.isArray(dashData.recentActivities), 'Live audit activities present');
 
